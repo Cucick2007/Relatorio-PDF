@@ -1,0 +1,136 @@
+@import url('https://fonts.cdnfonts.com/css/dreamworks-serif-ii');
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: antiquewhite;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+#relatorio {
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 50px 3px rgba(139, 99, 67, 0.13);
+    border: 1px solid #ccc;
+    visibility: hidden;
+    position: absolute;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+}
+
+h2 {
+    color: black;
+}
+
+.geral {
+    background-color: rgba(184, 135, 11, 0.162);
+    box-shadow: 0px 0px 50px 3px rgba(139, 99, 67, 0.269);
+    border: 1px solid rgba(255, 255, 255, 0.664);
+    border-radius: 50;
+    padding: 20px;
+    width: 100%;
+    max-width: 60vw;
+    height: 90%;
+    max-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.campo {
+    border: 1px solid #00000017;
+    box-shadow: 0px 0px 15px 3px rgba(88, 66, 37, 0.267);
+    background-color: rgba(204, 164, 112, 0.692);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.qtd, .valorU, .itens {
+    width: 15vw;
+    margin: 15px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cmp {
+    margin: 15px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#infos {
+    width: 15vw;
+    margin: 0;
+    margin-right: 68px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.prod {
+    display: flex;
+    margin-top: 15px;
+}
+
+#cnt {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+}
+
+input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 244, 229, 0.562);
+}
+
+#obs {
+    height: 100px;
+    max-height: 250px;
+    width: 1000px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 225, 186, 0.562);
+    box-shadow: 0px 0px 5px 0px rgba(155, 95, 65, 0.600);
+}
+
+.botoes {
+    margin-top: 13px;
+}
+
+@media print {
+    body {
+        visibility: hidden;
+    }
+
+    #relatorio,
+    #relatorio {
+        visibility: visible;
+        position: static;
+    }
+}

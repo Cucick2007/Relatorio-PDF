@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio PDF</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/dreamworks-serif-ii" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+        <div class="geral">
+            <div>
+                <div class="campo">
+
+                    <div class="dados">
+                        <div id="cmp">
+                            <label>Empresa:</label>
+                            <input type="text" placeholder="Digite o nome da Empresa" id="nome">
+                        </div>
+                        <div id="cmp">
+                            <label>Data de emissão:</label>
+                            <input type="date" placeholder="Digite a data de emissão" id="data">
+                        </div>
+                    </div>
+
+
+                    <div class="prod">
+                        <div id="cmp">
+                            <label>Itens:</label>
+                            <input type="text" placeholder="Intens Comprados" class="itens" id="itens0">
+                            <input type="text" placeholder="Intens Comprados" class="itens" id="itens1">
+                            <input type="text" placeholder="Intens Comprados" class="itens" id="itens2">
+                            <input type="text" placeholder="Intens Comprados" class="itens" id="itens3">
+                            <input type="text" placeholder="Intens Comprados" class="itens" id="itens4">
+                        </div>
+                        <div id="cmp">
+                            <label>Quantidade de produtos:</label>
+                            <input type="number" placeholder="Quantidade" class="qtd" id="qtd0">
+                            <input type="number" placeholder="Quantidade" class="qtd" id="qtd1">
+                            <input type="number" placeholder="Quantidade" class="qtd" id="qtd2">
+                            <input type="number" placeholder="Quantidade" class="qtd" id="qtd3">
+                            <input type="number" placeholder="Quantidade" class="qtd" id="qtd4">
+                        </div>
+                        <div id="cmp">
+                            <label>Valor Unitátio:</label>
+                            <input type="number" placeholder="R$ 00,00" class="valorU" id="valorU0">
+                            <input type="number" placeholder="R$ 00,00" class="valorU" id="valorU1">
+                            <input type="number" placeholder="R$ 00,00" class="valorU" id="valorU2">
+                            <input type="number" placeholder="R$ 00,00" class="valorU" id="valorU3">
+                            <input type="number" placeholder="R$ 00,00" class="valorU" id="valorU4">
+                        </div>
+                    </div>
+
+                    <div id="cnt">
+                        <div id="infos">
+                            <label>Valor Total:</label>
+                            <input type="number" placeholder="Digite o valor Total" id="valorT">
+                        </div>
+                        <div id="infos">
+                            <label>Assinatura do Contratante:</label>
+                            <input type="text" placeholder="Contratante" id="assC">
+                        </div>
+                        <div id="infos">
+                            <label>Assinatura do Aprovador:</label>
+                            <input type="text" placeholder="Aprovador" id="assA">
+                        </div>
+                    </div>
+
+                    <div class="dados" id="cmp">
+                        <label>Obs:</label>
+                        <input type="text" placeholder="Observação" id="obs">
+                    </div>
+                </div>
+
+
+                <div id="relatorio">
+                    <h2>Relatorio</h2>
+                    <p required><strong>Nome da Empresa:</strong><span id="nomeE"></span></p>
+                    <br>
+                    <p required><strong>Data de Emissão:</strong><span id="dataE"></span></p>
+                    <br>
+                    <p required><strong>Itens de Compra:</strong><span id="itensCompra"></span></p>
+                    <br>
+                    <p required><strong>Quantidade:</strong><span id="quantidade"></span></p>
+                    <br>
+                    <p required><strong>Valor Unitário:</strong><span id="valorUnitario"></span></p>
+                    <br>
+                    <p required><strong>Valor Total:</strong><span id="valorTotal"></span></p>
+                    <br>
+                    <p required><strong>Assinatura do Contratante e do Aprovador:</strong><span id="assinatura"></span>
+                    </p>
+                    <br>
+                    <p><strong>Observações:</strong><span id="observacao"></span></p>
+                    <br>
+                </div>
+            </div>
+
+            <div class="botoes">
+                <button onclick="gerarRelatorio()">Gerar Relatorio</button>
+                <button onclick="gerarPDF()">Gerar PDF</button>
+                <button onclick="imprimirRelatorio()">Imprimir</button>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
