@@ -64,11 +64,11 @@ function gerarRelatorio() {
             temItensPreenchidos = true;
         }
     }
+    
     // Se não houver itens preenchidos, exibe uma mensagem
     if (!temItensPreenchidos) {
         ulElement.innerHTML = '<li>Nenhum item informado.</li>';
     }
-
 
     // b) Preencher Quantidade (concatenando todos os valores)
     // Filtra para remover entradas vazias e junta com vírgula e espaço
